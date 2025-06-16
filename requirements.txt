@@ -1,0 +1,26 @@
+# ======================================================
+# ESSENTIAL EXTERNAL TOOLS
+# ======================================================
+
+# Up-to-date package management tools
+pip
+setuptools
+wheel
+
+# Easy logging for monitoring code execution
+loguru
+
+# HTTP requests made simple
+requests
+
+# Environment variables management
+python-dotenv
+
+# Git integration (used to clone OCD-division-ids repository)
+GitPython
+
+# YAML parsing (used for config.yaml and report outputs)
+PyYAML
+
+# Data manipulation and analysis
+pandas
