@@ -10,7 +10,7 @@ MIT License — Civic Interconnect
 from pathlib import Path
 import pandas as pd
 
-from civic_lib import log_utils
+from civic_lib_core import log_utils
 
 logger = log_utils.logger
 
