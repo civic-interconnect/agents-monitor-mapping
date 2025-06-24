@@ -34,7 +34,7 @@ def main():
     logger.info("===== Starting Monitor Mapping Agent =====")
     load_dotenv()
 
-    root_dir = Path(__file__).resolve().parents[2]
+    root_dir = Path.cwd()
     config = config_utils.load_yaml_config("config.yaml", root_dir=root_dir)
     version = config_utils.load_version("VERSION", root_dir=root_dir)
     today = today_utc_str()
@@ -42,7 +42,6 @@ def main():
 
     storage_path = ensure_dir(Path(config["storage_path"]) / today)
     report_path = ensure_dir(Path(config["report_path"]) / today)
-
     logger.info(f"Storage path: {storage_path}")
     logger.info(f"Report path: {report_path}")
 
