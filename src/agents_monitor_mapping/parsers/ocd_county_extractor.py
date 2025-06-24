@@ -8,8 +8,8 @@ MIT License — Civic Interconnect
 """
 
 from pathlib import Path
-import pandas as pd
 
+import pandas as pd
 from civic_lib_core import log_utils
 
 logger = log_utils.logger
@@ -28,9 +28,7 @@ def extract_counties(storage_path: str | Path, config: dict) -> pd.DataFrame:
     """
     logger.info("Starting OCD county extraction...")
 
-    csv_path = (
-        Path(storage_path) / "ocd-division-ids" / "identifiers" / "country-us.csv"
-    )
+    csv_path = Path(storage_path) / "ocd-division-ids" / "identifiers" / "country-us.csv"
     if not csv_path.exists():
         logger.error(f"OCD country-us.csv not found: {csv_path}")
         return pd.DataFrame()
@@ -70,10 +68,6 @@ def extract_county_slug(ocd_id: str) -> str:
         'ocd-division/country:us/state:mn/county:st_louis' -> 'st_louis'
     """
     return next(
-        (
-            part.split(":")[1]
-            for part in ocd_id.split("/")
-            if part.startswith("county:")
-        ),
+        (part.split(":")[1] for part in ocd_id.split("/") if part.startswith("county:")),
         "",
     )

@@ -8,8 +8,8 @@ MIT License — Civic Interconnect
 """
 
 from pathlib import Path
-import git
 
+import git
 from civic_lib_core import log_utils
 from civic_lib_core.path_utils import ensure_dir
 

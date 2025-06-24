@@ -2,7 +2,7 @@
 
 > Mapping Assistant Agent for Civic Interconnect
 
-[![Version](https://img.shields.io/badge/version-v0.2.1-blue)](https://github.com/civic-interconnect/agents-monitor-mapping/releases)
+[![Version](https://img.shields.io/badge/version-v0.2.2-blue)](https://github.com/civic-interconnect/agents-monitor-mapping/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-mapping/actions)
 

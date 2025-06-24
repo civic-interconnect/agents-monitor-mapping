@@ -8,18 +8,15 @@ MIT License — Civic Interconnect
 
 import sys
 from pathlib import Path
-import pandas as pd
-from dotenv import load_dotenv
 
-from civic_lib_core import log_utils, config_utils
+import pandas as pd
+from civic_lib_core import config_utils, log_utils
 from civic_lib_core.date_utils import today_utc_str
 from civic_lib_core.path_utils import ensure_dir
 from civic_lib_core.yaml_utils import write_yaml
+from dotenv import load_dotenv
 
-from parsers import ocd_parser, ocd_county_extractor
-
-log_utils.init_logger()
-logger = log_utils.logger
+from agents_monitor_mapping.parsers import ocd_county_extractor, ocd_parser
 
 
 def main():
@@ -30,12 +27,16 @@ def main():
     - report_path
     - ocd_repo_url
     """
+
+    log_utils.init_logger()
+    logger = log_utils.logger
+
     logger.info("===== Starting Monitor Mapping Agent =====")
     load_dotenv()
 
-    ROOT_DIR = Path(__file__).resolve().parent
-    config = config_utils.load_yaml_config("config.yaml", root_dir=ROOT_DIR)
-    version = config_utils.load_version("VERSION", root_dir=ROOT_DIR)
+    root_dir = Path(__file__).resolve().parents[2]
+    config = config_utils.load_yaml_config("config.yaml", root_dir=root_dir)
+    version = config_utils.load_version("VERSION", root_dir=root_dir)
     today = today_utc_str()
     logger.info(f"Polling date: {today}")
 
@@ -89,6 +90,5 @@ if __name__ == "__main__":
     try:
         main()
         sys.exit(0)
-    except Exception as e:
-        logger.exception(f"Agent failed unexpectedly. {e}")
+    except Exception:
         sys.exit(1)

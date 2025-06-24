@@ -1,3 +1,4 @@
+log_level: info  # Options: debug, info, warning, error, critical
 ocd_repo_url: https://github.com/opencivicdata/ocd-division-ids.git
 storage_path: ./storage/
 report_path: ./reports/
