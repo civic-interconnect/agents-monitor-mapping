@@ -1,4 +1,4 @@
-# Module `agents_monitor_mapping.cli.cli`
+# Module `cli.cli`
 
 ## Functions
 

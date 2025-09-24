@@ -1,4 +1,4 @@
-# Module `agents_monitor_mapping.parsers.ocd_county_extractor`
+# Module `parsers.ocd_county_extractor`
 
 ## Classes
 

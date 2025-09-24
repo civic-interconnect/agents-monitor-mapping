@@ -1,4 +1,4 @@
-# Module `agents_monitor_mapping.main`
+# Module `main`
 
 ## Classes
 
@@ -25,7 +25,7 @@ Returns:
     Path: The resolved Path object of the directory.
 
 Raises:
-    OSError: If directory cannot be created due to permissions or other issues.
+    OSError: If directory cannot be created.
 
 ### `load_dotenv(dotenv_path: Union[str, ForwardRef('os.PathLike[str]'), NoneType] = None, stream: Optional[IO[str]] = None, verbose: bool = False, override: bool = False, interpolate: bool = True, encoding: Optional[str] = 'utf-8') -> bool`
 

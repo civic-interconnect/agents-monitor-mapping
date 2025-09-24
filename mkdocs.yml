@@ -1,5 +1,7 @@
 site_name: agents-monitor-mapping Documentation
 site_description: Documentation for agents-monitor-mapping
+docs_dir: mkdocs_src
+site_dir: docs
 theme:
   name: material
   palette:
@@ -11,8 +13,10 @@ theme:
 nav:
 - Home: index.md
 - API Reference:
-  - Developer: api/DEVELOPER.md
-  - Readme: api/README.md
+  - Cli.Cli: api/cli.cli.md
+  - Main: api/main.md
+  - Parsers.Ocd County Extractor: api/parsers.ocd_county_extractor.md
+  - Parsers.Ocd Parser: api/parsers.ocd_parser.md
 plugins:
 - search
 markdown_extensions:

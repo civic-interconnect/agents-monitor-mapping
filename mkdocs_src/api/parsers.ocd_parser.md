@@ -1,4 +1,4 @@
-# Module `agents_monitor_mapping.parsers.ocd_parser`
+# Module `parsers.ocd_parser`
 
 ## Classes
 
@@ -25,7 +25,7 @@ Returns:
     Path: The resolved Path object of the directory.
 
 Raises:
-    OSError: If directory cannot be created due to permissions or other issues.
+    OSError: If directory cannot be created.
 
 ### `run(storage_path: str | pathlib.Path, config: dict) -> str`
 

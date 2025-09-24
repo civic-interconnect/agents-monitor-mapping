@@ -36,9 +36,9 @@ git pull
 py -m venv .venv
 .\.venv\Scripts\activate
 py -m pip install --upgrade pip setuptools wheel --prefer-binary
-py -m pip install --upgrade .[dev]
-pytest tests
+py -m pip install --upgrade -e .[dev]
+pytest -q
 civic-dev prep-code
-civic-dev bump-version 0.2.3 0.2.4
+civic-dev bump-version 0.2.4 0.2.5
 civic-dev release
 ```
